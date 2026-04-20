@@ -3,69 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lüks Villa İlanı</title>
+    <title>Kendi Elektriğini Üreten Lüks Villa</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; display: flex; justify-content: center; }
-        .container { background: white; max-width: 600px; width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
-        
-        /* Resim Bölümü */
-        .hero-img { width: 100%; height: 300px; object-fit: cover; }
-        
-        .content { padding: 25px; }
-        h1 { color: #1a202c; margin: 0 0 10px 0; font-size: 24px; }
-        p { color: #4a5568; line-height: 1.6; }
-
-        /* YouTube Video Bölümü (Esnek ve Mobil Uyumlu) */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Oranı */
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            margin: 20px 0;
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Kayıt Formu */
-        .form-box { background: #f8fafc; padding: 20px; border-radius: 15px; border: 1px solid #e2e8f0; }
-        .form-box h3 { margin-top: 0; color: #2d3748; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
-        button { width: 100%; padding: 15px; background: #1a73e8; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
-        button:hover { background: #1557b0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; display: flex; justify-content: center; }
+        .container { background: white; max-width: 650px; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-radius: 15px; overflow: hidden; margin: 20px; }
+        .hero-img { width: 100%; height: 350px; object-fit: cover; }
+        .content { padding: 30px; }
+        h1 { color: #2d3748; margin: 0 0 10px 0; font-size: 24px; border-bottom: 3px solid #1a73e8; display: inline-block; }
+        .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; background: #ebf4ff; padding: 15px; border-radius: 10px; font-size: 15px; color: #2c5282; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin: 25px 0; background: #000; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .form-box { background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #cbd5e0; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #1a73e8; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="/static/ev.jpg" alt="Villa Görseli" class="hero-img">
+    <img src="/static/ev.jpg" alt="Kendi Elektriğini Üreten Villa" class="hero-img">
 
     <div class="content">
-        <h1>Kendi elektiriğini üreten villa</h1>
-        <p>Hayallerinizdeki eve bir adım daha yaklaşın. Detayları aşağıdaki tanıtım videomuzdan izleyebilirsiniz.</p>
+        <h1>Kendi Elektriğini Üreten Lüks Villa</h1>
+        
+        <div class="specs">
+            <div>📍 Denizli, Bağbaşı</div>
+            <div>☀️ Güneş Enerji Sistemi</div>
+            <div>🏠 320 m² Kullanım Alanı</div>
+            <div>🛋️ 5+1 Geniş Yaşam Alanı</div>
+            <div>🔌 Şarj İstasyonu Mevcut</div>
+            <div>🌳 Köşe Parsel Bahçeli</div>
+        </div>
 
         <div class="video-container">
             <iframe 
-                src="https://www.youtube.com/embed/https://youtube.com/shorts/5-7dvpViUxA?si=lbi982aFmy3Z_515
+                src="https://www.youtube.com/embed/5-7dvpViUxA" 
+                title="Tanıtım Videosu"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
 
         <div class="form-box">
-            <h3>Bilgi Almak İstiyorum</h3>
+            <h3>Detaylı Bilgi & Randevu</h3>
             <form action="/kaydet" method="POST">
                 <input type="text" name="ad_soyad" placeholder="Adınız Soyadınız" required>
-                <input type="text" name="telefon" placeholder="Telefon Numaranız" required>
-                <input type="text" name="talep" placeholder="Mesajınız veya Özel Talebiniz">
-                <button type="submit">Gönder</button>
+                <input type="tel" name="telefon" placeholder="Telefon Numaranız" required>
+                <button type="submit">Hemen Bilgi Al</button>
             </form>
         </div>
     </div>
