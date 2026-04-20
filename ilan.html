@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lüks Villa İlanı</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; display: flex; justify-content: center; }
+        .container { background: white; max-width: 600px; width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+        
+        /* Resim Bölümü */
+        .hero-img { width: 100%; height: 300px; object-fit: cover; }
+        
+        .content { padding: 25px; }
+        h1 { color: #1a202c; margin: 0 0 10px 0; font-size: 24px; }
+        p { color: #4a5568; line-height: 1.6; }
+
+        /* YouTube Video Bölümü (Esnek ve Mobil Uyumlu) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Oranı */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Kayıt Formu */
+        .form-box { background: #f8fafc; padding: 20px; border-radius: 15px; border: 1px solid #e2e8f0; }
+        .form-box h3 { margin-top: 0; color: #2d3748; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
+        button { width: 100%; padding: 15px; background: #1a73e8; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #1557b0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="/static/ev.jpg" alt="Villa Görseli" class="hero-img">
+
+    <div class="content">
+        <h1>Deniz Manzaralı Özel Villa</h1>
+        <p>Hayallerinizdeki eve bir adım daha yaklaşın. Detayları aşağıdaki tanıtım videomuzdan izleyebilirsiniz.</p>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/VIDEO_ID_BURAYA" https://youtube.com/shorts/5-7dvpViUxA?si=P3aw0iEKBcJRwq7S
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="form-box">
+            <h3>Bilgi Almak İstiyorum</h3>
+            <form action="/kaydet" method="POST">
+                <input type="text" name="ad_soyad" placeholder="Adınız Soyadınız" required>
+                <input type="text" name="telefon" placeholder="Telefon Numaranız" required>
+                <input type="text" name="talep" placeholder="Mesajınız veya Özel Talebiniz">
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
