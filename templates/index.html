@@ -3,71 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lüks Villa | Denizli Bağbaşı</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Sıfır Faturayla Geleceğe Adım Atın | Oreon Gayrimenkul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root { --accent: #bc965d; }
-        body { font-family: 'Montserrat', sans-serif; }
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/dis1.jpg'); 
-            background-size: cover; height: 100vh; display: flex; align-items: center; color: white; text-align: center;
+        /* Logodaki lacivert tonu baz alınmıştır */
+        :root { 
+            --accent: #bc965d; 
+            --luxury-navy: #0a162b; /* Logodaki lacivert */
+            --dark-navy: #050c1a; 
         }
-        .btn-luxury { background: var(--accent); color: white; padding: 15px 40px; border-radius: 0; font-weight: bold; text-decoration: none; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            color: #ffffff; 
+            line-height: 1.6; 
+            background-color: var(--luxury-navy); 
+        }
+        
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Navigasyon / Logo Alanı */
+        .nav-container { 
+            padding: 10px 0; 
+            background: rgba(5, 12, 26, 0.98); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(188, 150, 93, 0.2); 
+        }
+        .navbar-brand img { height: 65px; width: auto; }
+
+        .hero { 
+            background: linear-gradient(rgba(10, 22, 43, 0.7), rgba(10, 22, 43, 0.5)), url('/static/ev.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            color: white; 
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .gold-text { color: var(--accent); font-weight: bold; letter-spacing: 3px; text-transform: uppercase; }
+        
+        .btn-luxury { 
+            background: var(--accent); 
+            color: white; 
+            padding: 18px 45px; 
+            border-radius: 0; 
+            font-weight: bold; 
+            text-decoration: none; 
+            display: inline-block; 
+            transition: 0.3s; 
+            border: none; 
+            letter-spacing: 1px;
+        }
+        .btn-luxury:hover { background: #d4af7a; transform: translateY(-3px); color: #fff; }
+
+        .section-bg-darker { background-color: var(--dark-navy); padding: 80px 0; }
+        
+        .feature-icon-box {
+            padding: 40px; 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(188, 150, 93, 0.15);
+            transition: 0.3s; 
+            height: 100%;
+        }
+        .feature-icon-box:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.07); }
+
+        .video-container { 
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+            overflow: hidden; 
+            border: 5px solid rgba(188, 150, 93, 0.3); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4); 
+        }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .gallery-img { width: 100%; height: 300px; object-fit: cover; margin-bottom: 20px; border: 2px solid #eee; }
+
+        .gallery-img { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            transition: 0.5s ease; 
+            border: 1px solid rgba(255,255,255,0.1); 
+        }
+        .gallery-img:hover { transform: scale(1.03); border-color: var(--accent); }
+        
+        .form-control { 
+            background: rgba(255,255,255,0.05) !important; 
+            color: white !important; 
+            border: 1px solid rgba(188, 150, 93, 0.3) !important; 
+            border-radius: 0; 
+            padding: 15px; 
+        }
+        .form-control::placeholder { color: rgba(255,255,255,0.5); }
+
+        footer { background: #03070d; color: #666; padding: 60px 0; border-top: 1px solid #111; }
+        .footer-logo { height: 80px; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
+    <nav class="nav-container">
+        <div class="container text-center">
+            <a class="navbar-brand" href="#">
+                <img src="/static/logo.jpeg" alt="Oreon Gayrimenkul">
+            </a>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
-            <h1 class="display-3 mb-4">Denizli Bağbaşı'nda Lüks Yaşam</h1>
-            <p class="lead mb-5">555 m² Arsa Üzerinde Kendi Enerjisini Üreten Modern Villa</p>
-            <a href="#form" class="btn-luxury">BİLGİ ALIN</a>
+            <p class="gold-text mb-3">Prestij Ve Teknoloji Bir Arada</p>
+            <h1 class="display-1 mb-4">Kendi Elektriğini <br> <span style="color: var(--accent);">Üreten Villa</span></h1>
+            <p class="lead mb-5 px-md-5 fs-4 fw-light opacity-90">Denizli Bağbaşı'nda fatura stresini tarihe gömen, <br> 555 m² arsa üzerine kurulu akıllı bir yaşam.</p>
+            <a href="#form-section" class="btn-luxury text-uppercase">Sunum Randevusu Alın</a>
         </div>
     </header>
 
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="mb-4">Geleceğin Evi</h2>
-                    <p>Bu özel villa, 320 m² kullanım alanı ve akıllı enerji sistemleriyle donatılmıştır. Videoyu izleyerek tüm detayları görebilirsiniz.</p>
+    <section class="py-5 container my-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="feature-icon-box">
+                    <h3 class="h4 mb-3" style="color: var(--accent);">Enerji Bağımsızlığı</h3>
+                    <p class="small opacity-75">Güneş enerjisi sistemiyle sıfır maliyetli ve sürdürülebilir bir yaşam.</p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/5-7dvpViUxA" frameborder="0" allowfullscreen></iframe>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-icon-box">
+                    <h3 class="h4 mb-3" style="color: var(--accent);">Geniş Parsel</h3>
+                    <p class="small opacity-75">555 m² köşe parsel üzerinde, ferah bahçe ve mahremiyet alanı.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-icon-box">
+                    <h3 class="h4 mb-3" style="color: var(--accent);">Akıllı Mimari</h3>
+                    <p class="small opacity-75">320 m² kapalı alan, ada mutfak ve her odaya özel banyo konforu.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 container">
-        <h2 class="text-center mb-5">Villadan Kareler</h2>
-        <div class="row">
-            <div class="col-md-4"><img src="/static/dis2.jpg" class="gallery-img"></div>
-            <div class="col-md-4"><img src="/static/salon1.jpg" class="gallery-img"></div>
-            <div class="col-md-4"><img src="/static/mutfak1.jpg" class="gallery-img"></div>
+    <section class="section-bg-darker">
+        <div class="container text-center">
+            <h2 class="display-5 mb-5">Sıfır Fatura Konseptini İzleyin</h2>
+            <div class="video-container mx-auto" style="max-width: 900px;">
+                <iframe src="https://www.youtube.com/embed/5-7dvpViUxA" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
 
-    <section id="form" class="py-5 bg-dark text-white text-center">
-        <div class="container">
-            <h2 class="mb-4">Özel Sunum İçin Formu Doldurun</h2>
-            <div class="row justify-content-center">
+    <section class="py-5 container">
+        <h2 class="text-center mb-5 display-6 gold-text">Portföy Detayları</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4 col-6">
+                <img src="/static/ev dışcephe1.jpg" class="gallery-img">
+                <p class="mt-2 small fw-bold">DIŞ CEPHE</p>
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="/static/ev salon1.jpg" class="gallery-img">
+                <p class="mt-2 small fw-bold">SALON</p>
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="/static/ev mutfak1.jpg" class="gallery-img">
+                <p class="mt-2 small fw-bold">ADA MUTFAK</p>
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="/static/ev ebeveyn1.JPEG" class="gallery-img">
+                <p class="mt-2 small fw-bold">EBEVEYN ODASI</p>
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="/static/ev oturma.jpg" class="gallery-img">
+                <p class="mt-2 small fw-bold">OTURMA ODASI</p>
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="/static/ev dışcephe3.jpg" class="gallery-img">
+                <p class="mt-2 small fw-bold">PANORAMİK</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-section" class="section-bg-darker border-top border-dark">
+        <div class="container text-center">
+            <h2 class="mb-4 display-5 gold-text">Özel Bilgi Formu</h2>
+            <p class="mb-5 lead opacity-75">Bu mülk hakkında fiyat ve katalog bilgisi almak için formu doldurun.</p>
+            <div class="row justify-content-center text-start">
                 <div class="col-md-5">
                     <form action="/kaydet" method="POST">
-                        <input type="text" name="ad_soyad" class="form-control mb-3" placeholder="Adınız Soyadınız" required>
-                        <input type="tel" name="telefon" class="form-control mb-3" placeholder="Telefonunuz" required>
-                        <button type="submit" class="btn-luxury w-100">BİLGİ GÖNDER</button>
+                        <div class="mb-3">
+                            <input type="text" name="ad_soyad" class="form-control" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="tel" name="telefon" class="form-control" placeholder="Telefon Numaranız" required>
+                        </div>
+                        <button type="submit" class="btn-luxury w-100 border-0">KATALOG VE SUNUM İSTE</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="container text-center">
+            <img src="/static/logo.jpeg" class="footer-logo" alt="Oreon Gayrimenkul">
+            <p class="small mb-0">Oreon Gayrimenkul | Denizli Lüks Konut Uzmanı</p>
+            <p class="small text-muted mt-2">© 2026 Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
