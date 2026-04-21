@@ -21,64 +21,63 @@
             overflow-x: hidden;
         }
 
-        /* HEADER - LOGO ALANI */
+        /* HEADER - DEV LOGO ALANI */
         .header-top {
-            padding: 40px 0;
+            padding: 50px 0;
             background: linear-gradient(to bottom, var(--dark-navy), var(--luxury-navy));
             border-bottom: 1px solid rgba(188, 150, 93, 0.2);
             text-align: center;
         }
         .header-top img {
-            max-height: 140px; /* Logo iyice büyütüldü */
+            max-height: 160px;
             width: auto;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
         }
 
-        /* HERO - ANA GÖRSEL */
+        /* HERO AREA */
         .hero { 
             position: relative;
-            background: linear-gradient(rgba(10, 22, 43, 0.7), rgba(10, 22, 43, 0.7)), url('/static/ev.jpg'); 
+            background: linear-gradient(rgba(10, 22, 43, 0.75), rgba(10, 22, 43, 0.75)), url('/static/ev.jpg'); 
             background-size: cover; 
             background-position: center; 
-            height: 70vh; 
+            height: 60vh; 
             display: flex; 
             align-items: center; 
             text-align: center;
         }
         
-        .gold-label { color: var(--accent); font-weight: bold; letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 15px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 25px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
 
-        /* ÖZELLİK KUTULARI */
+        /* ÖZELLİK KARTLARI (METİNLER BURADA KALIYOR) */
         .feature-section { padding: 80px 0; background: var(--luxury-navy); }
         .feature-card {
-            padding: 30px;
+            padding: 40px;
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(188, 150, 93, 0.1);
+            border: 1px solid rgba(188, 150, 93, 0.15);
             height: 100%;
-            transition: 0.3s;
         }
-        .feature-card h3 { color: var(--accent); margin-bottom: 15px; font-family: 'Playfair Display', serif; }
+        .feature-card h3 { color: var(--accent); margin-bottom: 20px; font-family: 'Playfair Display', serif; font-size: 1.6rem; }
 
         /* VİDEO */
         .video-box {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
-            border: 5px solid var(--accent);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 6px solid rgba(188, 150, 93, 0.3);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
         }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        /* GALERİ */
+        /* GALERİ (FOTOĞRAF SAYISI DÜZENLENDİ) */
         .gallery-section { padding: 80px 0; }
         .gallery-img { 
             width: 100%; 
-            height: 300px; 
+            height: 320px; 
             object-fit: cover; 
             border: 1px solid rgba(188, 150, 93, 0.2);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-        .gallery-text { color: var(--accent); font-weight: bold; font-size: 0.8rem; margin-bottom: 30px; letter-spacing: 1px; }
+        .gallery-text { color: var(--accent); font-weight: bold; font-size: 0.85rem; margin-bottom: 35px; letter-spacing: 2px; }
 
         /* FORM */
         .form-section { padding: 100px 0; background: var(--dark-navy); }
@@ -87,23 +86,23 @@
             border: 1px solid rgba(188, 150, 93, 0.3) !important;
             color: white !important;
             border-radius: 0;
-            padding: 15px;
+            padding: 18px;
             margin-bottom: 20px;
         }
         .btn-send {
             background: var(--accent);
             color: white;
             border: none;
-            padding: 18px;
+            padding: 20px;
             width: 100%;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             transition: 0.3s;
+            text-transform: uppercase;
         }
-        .btn-send:hover { background: #d4af7a; transform: translateY(-3px); }
 
-        footer { padding: 60px 0; background: #03070d; border-top: 1px solid #111; text-align: center; }
-        .footer-logo { height: 90px; margin-bottom: 20px; opacity: 0.8; }
+        footer { padding: 80px 0; background: #03070d; border-top: 1px solid #111; text-align: center; }
+        .footer-logo { height: 100px; margin-bottom: 25px; }
     </style>
 </head>
 <body>
@@ -114,11 +113,10 @@
         </div>
     </div>
 
-    <section class="hero">
+    <section class="hero text-center">
         <div class="container">
-            <span class="gold-label">Oreon Gayrimenkul Gururla Sunar</span>
             <h1>Bu Villa Kendi Elektriğini <br> <span style="color: var(--accent);">Üretiyor!</span></h1>
-            <p class="lead opacity-75 fs-4">Denizli Bağbaşı'nda, 555 m² arsa üzerine kurulu sıfır fatura konseptli lüks yaşam.</p>
+            <p class="lead opacity-90">Denizli Bağbaşı'nda, 555 m² Arsa Üzerine Kurulu Modern Yaşam.</p>
         </div>
     </section>
 
@@ -127,29 +125,29 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <h3>Sıfır Enerji</h3>
-                        <p class="small">Güneş enerjisi altyapısı ile fatura derdine son veren teknolojik altyapı.</p>
+                        <h3>Enerji Özgürlüğü</h3>
+                        <p>Güneş paneli altyapısı ile elektrik faturasını sıfırlayan teknolojik altyapı.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <h3>5+1 Lüks Plan</h3>
-                        <p class="small">320 m² kullanım alanı, ada mutfak ve her odaya özel banyo konforu.</p>
+                        <h3>Ebeveyn Konforu</h3>
+                        <p>Geniş ebeveyn yatak odası, özel banyo ve giyinme odası detaylarıyla donatılmış ebeveyn süiti.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <h3>Köşe Parsel</h3>
-                        <p class="small">555 m² arsa payı ile Bağbaşı'nın en ferah ve en geniş bahçeli villası.</p>
+                        <h3>Prestijli Lokasyon</h3>
+                        <p>555 m² köşe parsel üzerinde, Bağbaşı Kervansaray bölgesinin en özel noktasında.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5" style="background: rgba(0,0,0,0.2);">
+    <section class="py-5" style="background: rgba(0,0,0,0.3);">
         <div class="container py-5 text-center">
-            <h2 class="mb-5 font-serif gold-label" style="font-size: 1.5rem;">VİLLA TANITIM VİDEOSU</h2>
+            <h2 class="mb-5 gold-text" style="letter-spacing: 5px;">VİLLA TURU</h2>
             <div class="video-box">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/5-7dvpViUxA" frameborder="0" allowfullscreen></iframe>
@@ -160,8 +158,8 @@
 
     <section class="gallery-section text-center">
         <div class="container">
-            <h2 class="gold-label mb-5">VİLLADAN KARELER</h2>
-            <div class="row g-4">
+            <h2 class="mb-5" style="color: var(--accent); letter-spacing: 5px; font-weight: bold;">PORTFÖY GALERİSİ</h2>
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-4 col-6">
                     <img src="/static/ev dışcephe1.jpg" class="gallery-img">
                     <div class="gallery-text">DIŞ CEPHE</div>
@@ -175,16 +173,12 @@
                     <div class="gallery-text">ADA MUTFAK</div>
                 </div>
                 <div class="col-md-4 col-6">
-                    <img src="/static/ev ebeveyn1.JPEG" class="gallery-img">
-                    <div class="gallery-text">EBEVEYN ODASI</div>
-                </div>
-                <div class="col-md-4 col-6">
                     <img src="/static/ev oturma.jpg" class="gallery-img">
                     <div class="gallery-text">OTURMA ODASI</div>
                 </div>
                 <div class="col-md-4 col-6">
                     <img src="/static/ev dışcephe3.jpg" class="gallery-img">
-                    <div class="gallery-text">BAHÇE VE KONUM</div>
+                    <div class="gallery-text">BAHÇE VE ÇEVRE</div>
                 </div>
             </div>
         </div>
@@ -192,28 +186,5 @@
 
     <section class="form-section">
         <div class="container text-center">
-            <h2 class="gold-label mb-4">SUNUM VE BİLGİ TALEBİ</h2>
-            <p class="mb-5 opacity-75 lead">Fiyat ve teknik detaylar için uzman danışmanlarımız size ulaşsın.</p>
-            <div class="row justify-content-center">
-                <div class="col-md-5">
-                    <form action="/kaydet" method="POST" class="text-start">
-                        <input type="text" name="ad_soyad" class="form-control" placeholder="Ad Soyad" required>
-                        <input type="tel" name="telefon" class="form-control" placeholder="Telefon" required>
-                        <button type="submit" class="btn-send">BİLGİLERİ GÖNDER</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <img src="/static/logo.jpeg" class="footer-logo" alt="Oreon">
-            <p class="small text-muted mb-0">Oreon Gayrimenkul | Denizli Lüks Konut Portföyü</p>
-            <p class="small opacity-50 mt-2">© 2026 Tüm Hakları Saklıdır.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+            <h2 class="mb-4" style="color: var(--accent); letter-spacing: 3px;">DETAYLI BİLGİ VE SUNUM</h2>
+            <p
