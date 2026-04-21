@@ -1,22 +1,27 @@
 from flask import Flask, render_template, request
+import os
 
-# Dosyalar yan yana olduğu için '.' (nokta) koyduk
-app = Flask(__name__, template_folder='.')
+# Standart Flask yapısı: templates klasörünü otomatik tanır
+app = Flask(__name__)
 
 @app.route('/')
 def ana_sayfa():
-    return render_template('ilan.html')
+    # Artık 'templates/index.html' dosyasını arayacak
+    return render_template('index.html')
 
 @app.route('/kaydet', methods=['POST'])
 def kaydet():
     ad = request.form.get('ad_soyad')
     tel = request.form.get('telefon')
-    butce = request.form.get('butce')
+    saat = request.form.get('saat') # Formdaki yeni saat alanını aldık
     
+    # Verileri musteriler.txt dosyasına kaydeder
     with open("musteriler.txt", "a", encoding="utf-8") as f:
-        f.write(f"Ad: {ad}, Tel: {tel}, Butce: {butce}\n")
+        f.write(f"Ad: {ad}, Tel: {tel}, Tercih Edilen Saat: {saat}\n")
     
-    return "<h1>Bilgileriniz kaydedildi!</h1><a href='/'>Geri Don</a>"
+    return "<h1>Bilgileriniz başarıyla kaydedildi! En kısa sürede size ulaşacağız.</h1><a href='/'>Siteye Geri Dön</a>"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Render'da çalışması için port ayarı
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
