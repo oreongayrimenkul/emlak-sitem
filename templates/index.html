@@ -3,69 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lüks Villa | Denizli Bağbaşı'nda Kendi Enerjisini Üreten Yaşam</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Lüks Villa | Denizli Bağbaşı</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root {
-            --accent-color: #bc965d; 
-            --dark-bg: #1a1a1a;
+        :root { --accent: #bc965d; }
+        body { font-family: 'Montserrat', sans-serif; }
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/dis1.jpg'); 
+            background-size: cover; height: 100vh; display: flex; align-items: center; color: white; text-align: center;
         }
-        body { font-family: 'Montserrat', sans-serif; color: #333; scroll-behavior: smooth; overflow-x: hidden; }
-        h1, h2, .playfair { font-family: 'Playfair Display', serif; }
-
-        /* Hero Section - Arka Plan Görseli */
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/ev1.jpg');
-            background-size: cover; background-position: center; background-attachment: fixed;
-            height: 100vh; display: flex; align-items: center; color: white;
-        }
-
-        .section-padding { padding: 100px 0; }
-        .btn-luxury { 
-            background-color: var(--accent-color); color: white; 
-            padding: 18px 45px; border-radius: 0; border: none; 
-            transition: 0.4s; letter-spacing: 2px; font-weight: bold; text-decoration: none;
-            display: inline-block;
-        }
-        .btn-luxury:hover { background-color: #a6824d; color: white; transform: translateY(-3px); }
-
-        .feature-box { 
-            background: #fff; padding: 40px; border-bottom: 4px solid var(--accent-color);
-            transition: 0.3s; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        /* Video Alanı Tasarımı */
-        .video-wrapper {
-            position: relative; padding-bottom: 56.25%; height: 0; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 8px solid white; margin-top: 30px;
-        }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-        /* Galeri */
-        .gallery-img {
-            width: 100%; height: 350px; object-fit: cover; 
-            transition: 0.5s; cursor: pointer;
-        }
-        .gallery-img:hover { transform: scale(1.03); }
-
-        .specs-table td { padding: 20px; border-bottom: 1px solid #eee; }
-        .specs-label { font-weight: 700; color: var(--accent-color); text-transform: uppercase; font-size: 0.85rem; }
-
-        footer { background: var(--dark-bg); color: #888; padding: 50px 0; }
-        .form-control { border-radius: 0; border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; }
+        .btn-luxury { background: var(--accent); color: white; padding: 15px 40px; border-radius: 0; font-weight: bold; text-decoration: none; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .gallery-img { width: 100%; height: 300px; object-fit: cover; margin-bottom: 20px; border: 2px solid #eee; }
     </style>
 </head>
 <body>
 
-    <header class="hero-section text-center">
+    <header class="hero">
         <div class="container">
-            <p class="mb-3 fs-5" style="letter-spacing: 3px; color: var(--accent-color);">DENİZLİ BAĞBAŞI KERVANSARAY</p>
-            <h1 class="display-2 mb-4">Sıfır Fatura, Maksimum Özgürlük</h1>
-            <p class="lead mb-5 fs-4">555 m² Köşe Parsel Üzerinde Kendi Elektriğini Üreten Geleceğin Villası</p>
-            <a href="#iletisim" class="btn btn-luxury btn-lg">PROJEYİ KEŞFEDİN</a>
+            <h1 class="display-3 mb-4">Denizli Bağbaşı'nda Lüks Yaşam</h1>
+            <p class="lead mb-5">555 m² Arsa Üzerinde Kendi Enerjisini Üreten Modern Villa</p>
+            <a href="#form" class="btn-luxury">BİLGİ ALIN</a>
         </div>
     </header>
 
-    <section class="section-padding container text-center">
-        <div class="row g-4">
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Geleceğin Evi</h2>
+                    <p>Bu özel villa, 320 m² kullanım alanı ve akıllı enerji sistemleriyle donatılmıştır. Videoyu izleyerek tüm detayları görebilirsiniz.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/5-7dvpViUxA" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 container">
+        <h2 class="text-center mb-5">Villadan Kareler</h2>
+        <div class="row">
+            <div class="col-md-4"><img src="/static/dis2.jpg" class="gallery-img"></div>
+            <div class="col-md-4"><img src="/static/salon1.jpg" class="gallery-img"></div>
+            <div class="col-md-4"><img src="/static/mutfak1.jpg" class="gallery-img"></div>
+        </div>
+    </section>
+
+    <section id="form" class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Özel Sunum İçin Formu Doldurun</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <form action="/kaydet" method="POST">
+                        <input type="text" name="ad_soyad" class="form-control mb-3" placeholder="Adınız Soyadınız" required>
+                        <input type="tel" name="telefon" class="form-control mb-3" placeholder="Telefonunuz" required>
+                        <button type="submit" class="btn-luxury w-100">BİLGİ GÖNDER</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
